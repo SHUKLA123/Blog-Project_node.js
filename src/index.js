@@ -18,7 +18,7 @@ app.get('/blog',(req,res)=>{
 })
 
 const connectionString = 'mongodb+srv://Sonu:Sonu@12345@cluster0.sjzkk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
+MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/blog-project-quotes', { useUnifiedTopology: true })
   .then(client => {
     console.log('Connected to Database')
     const db = client.db('blog-project-quotes')
