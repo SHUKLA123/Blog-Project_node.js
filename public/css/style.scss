@@ -1,0 +1,83 @@
+.addressLink {
+  list-style: none;
+  overflow: hidden;
+  font: 16px;
+  margin: 30px;
+  padding: 0px;
+  border: 2px solid black;
+  font-style: italic;
+}
+
+.addressLink li {
+  float: left;
+}
+
+.addressLink li a {
+  background: #006600;
+  color: white;
+  text-decoration: none;
+  padding: 5px 0px 5px 65px;
+  position: relative;
+  float: left;
+}
+
+.addressLink li a:after {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #006600;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 2;
+}
+
+.addressLink li a:before {
+  content: " ";
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 1;
+}
+
+.addressLink li:first-child a {
+  padding-left: 10px;
+}
+
+.addressLink li:nth-child(2) a {
+  background: #009933;
+}
+
+.addressLink li:nth-child(2) a:after {
+  border-left-color: #009933;
+}
+
+.addressLink li:nth-child(3) a {
+  background: #33cc33;
+}
+
+.addressLink li:nth-child(3) a:after {
+  border-left-color: #33cc33;
+}
+
+
+.addressLink li:last-child a {
+  background: transparent !important;
+  color: black;
+}
+
+.addressLink li:last-child a:after {
+  border: 0;
+}
+
+.addressLink li a:hover {
+  background: #99ff99;
+}
+
+.addressLink li a:hover:after {
+  border-left-color: #99ff99 !important;
+}
