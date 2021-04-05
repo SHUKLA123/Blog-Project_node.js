@@ -18,7 +18,7 @@ app.get('/blog',(req,res)=>{
 })
 
 const connectionString = 'mongodb+srv://Sonu:Sonu@12345@cluster0.sjzkk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/blog-project-quotes', { useUnifiedTopology: true })
+MongoClient.connect(connectionString, { useUnifiedTopology: true })
   .then(client => {
     console.log('Connected to Database')
     const db = client.db('blog-project-quotes')
@@ -74,7 +74,6 @@ MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/blog-project
       // app.get('*',(req,res)=>{res.send("404error");})
   })
   
-
 app.listen(port, () => {
   console.log('');
 })
